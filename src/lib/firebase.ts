@@ -21,15 +21,14 @@ import { getFunctions, type Functions } from "firebase/functions";
 //    the placeholder values like "PASTE_YOUR_API_KEY_HERE".
 // =================================================================================
 export const firebaseConfig = {
-  apiKey: "AIzaSyDORczgYjyxDvjSAfW7Q9fsT8wkJ4gIe1g",
-  authDomain: "blink-notify-494bf.firebaseapp.com",
-  databaseURL: "https://blink-notify-494bf-default-rtdb.firebaseio.com",
-  projectId: "blink-notify-494bf",
-  storageBucket: "blink-notify-494bf.firebasestorage.app",
-  messagingSenderId: "450079883039",
-  appId: "1:450079883039:web:4e4162b5a3f6e1beb27a2a",
-  measurementId: "G-3H7JE2SJFH"
+  apiKey: "AIzaSyA0ow_omnTQpny-b5OT7gJNPScDCCa8QMI",
+  authDomain: "preschool-demo-621f9.firebaseapp.com",
+  projectId: "preschool-demo-621f9",
+  storageBucket: "preschool-demo-621f9.firebasestorage.app",
+  messagingSenderId: "13117689300",
+  appId: "1:13117689300:web:93ee30d12b357c82fa1a41"
 };
+
 
 
 // Function to check if Firebase config is filled
