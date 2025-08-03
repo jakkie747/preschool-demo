@@ -1,0 +1,25 @@
+
+{
+  "name": "Blinkogies Family Hub",
+  "short_name": "Blinkogies Hub",
+  "description": "A family hub for Blinkogies Pre-school, providing updates, events, and communication.",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#59ABEF",
+  "background_color": "#EBF6FF",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}

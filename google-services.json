@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "450079883039",
+    "project_id": "blink-notify-494bf",
+    "storage_bucket": "blink-notify-494bf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450079883039:android:09445bc4809ba1b2b27a2a",
+        "android_client_info": {
+          "package_name": "co.za.company.blinkogies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCllPpwubpm2RwfBuIT1JVHIdGQd0i0ZOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

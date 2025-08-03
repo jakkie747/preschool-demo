@@ -1,0 +1,41 @@
+
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+  
+    // Helper function to check if a user is an authenticated admin
+    function isAdmin() {
+      return request.auth != null && get(/databases/$(database)/documents/teachers/$(request.auth.uid)).data.role == 'admin';
+    }
+  
+    // Allow public read access on these folders so images can be displayed in the app
+    match /children/{allPaths=**} {
+      allow read: if true;
+    }
+    match /events/{allPaths=**} {
+      allow read: if true;
+    }
+    match /activities/{allPaths=**} {
+      allow read: if true;
+    }
+     match /documents/{allPaths=**} {
+      allow read: if true;
+    }
+     match /reports/{allPaths=**} {
+      allow read: if true;
+    }
+     match /teachers/{allPaths=**} {
+      allow read: if true;
+    }
+
+    // Allow writes (uploads/deletes) only if the user is an authenticated admin,
+    // or for the public child registration form.
+    // Restrict file size to 5MB and only allow image content types.
+    match /{path}/{allPaths=**} {
+      allow write: if (request.resource.size < 5 * 1024 * 1024 &&
+                      (request.resource.contentType.matches('image/.*') || request.resource.contentType.matches('application/.*')))
+                   && (isAdmin() || path == 'children');
+    }
+  }
+}

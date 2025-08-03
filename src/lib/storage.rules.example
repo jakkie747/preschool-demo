@@ -1,0 +1,13 @@
+rules_version = '2';
+
+// Warning: These rules are permissive and allow public read and write access.
+// This is suitable for a public-facing prototype application but should be
+// secured with authentication for a production environment.
+service firebase.storage {
+  match /b/{bucket}/o {
+    // This rule allows any user to read or write any file in your bucket.
+    match /{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+}
