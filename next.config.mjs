@@ -16,6 +16,9 @@ const nextConfig = {
       },
     ],
   },
+  allowedDevOrigins: [
+    'https://3001-firebase-preschool-demo-1754202345068.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev',
+  ],
   webpack: (config, { isServer }) => {
     // Fix for the 'handlebars' issue with Next.js App Router
     if (!isServer) {
